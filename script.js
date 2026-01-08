@@ -39,4 +39,46 @@ search.addEventListener("input", () => {
       `;
       results.appendChild(div);
     });
+  const links = [
+  {
+    title: "Archived Field Database",
+    url: "https://carmenravanya616-droid.github.io/New-site/",
+    category: "External",
+    keywords: "cryptid anomaly field sightings archive"
+  },
+
+  {
+    title: "Internal Medical Research Notes",
+    url: "#",
+    category: "Internal",
+    keywords: "cellular tissue regeneration studies"
+  }
+];
+
+const searchInput = document.getElementById("search");
+const linkList = document.getElementById("link-list");
+
+function displayLinks(results) {
+  linkList.innerHTML = "";
+
+  results.forEach(link => {
+    const li = document.createElement("li");
+    li.innerHTML = `<a href="${link.url}" target="_blank">${link.title}</a>`;
+    linkList.appendChild(li);
+  });
+}
+
+searchInput.addEventListener("input", () => {
+  const query = searchInput.value.toLowerCase();
+
+  const filtered = links.filter(link =>
+    link.title.toLowerCase().includes(query) ||
+    link.keywords.toLowerCase().includes(query)
+  );
+
+  displayLinks(filtered);
+});
+
+// show all links at page load (optional)
+displayLinks(links);
 });
