@@ -1,0 +1,46 @@
+body {
+  background: black;
+  color: #00ff66;
+  font-family: "Courier New", monospace;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid #00ff66;
+}
+
+h1 {
+  text-align: center;
+  letter-spacing: 4px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  background: black;
+  color: #00ff66;
+  border: 1px solid #00ff66;
+  margin-bottom: 20px;
+}
+
+.cryptid {
+  border: 1px dashed #00ff66;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+footer {
+  font-size: 10px;
+  text-align: center;
+  opacity: 0.6;
+}
